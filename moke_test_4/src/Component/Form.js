@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+
 function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [password, setPassword] = useState("");
-  const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
-  const [date, setDate] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [password, setPassword] = useState('');
+  const [age, setAge] = useState('');
+  const [gender, setGender] = useState('');
+  const [date, setDate] = useState('');
+  const [color, setColor] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,13 +16,14 @@ function Form() {
     // Perform validation here
 
     // Reset form after submission
-    setName("");
-    setEmail("");
-    setPhoneNumber("");
-    setPassword("");
-    setAge("");
-    setGender("");
-    setDate("");
+    setName('');
+    setEmail('');
+    setPhoneNumber('');
+    setPassword('');
+    setAge('');
+    setGender('');
+    setDate('');
+    setColor('');
   };
 
   return (
@@ -28,47 +31,27 @@ function Form() {
       <form className="form" onSubmit={handleSubmit}>
         <label>
           Name:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         </label>
         <br />
         <label>
           Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
         <br />
         <label>
           Phone Number:
-          <input
-            type="tel"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
+          <input type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         </label>
         <br />
         <label>
           Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
         <label>
           Age:
-          <input
-            type="number"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
+          <input type="number" value={age} onChange={(e) => setAge(e.target.value)} />
         </label>
         <br />
         <label>
@@ -83,13 +66,13 @@ function Form() {
         <br />
         <label>
           Date:
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
+          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
         </label>
-
+        <br />
+        <label>
+          Color:
+          <input type="color" value={color} onChange={(e) => setColor(e.target.value)} />
+        </label>
         <br />
         <button type="submit">Submit</button>
       </form>
